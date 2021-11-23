@@ -1,0 +1,123 @@
+@import '../../assets/scss/app.scss';
+
+.header {
+  @include container();
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 14px;
+  z-index: 9999;
+
+
+  @include desktop() {
+    padding-top: 28px;
+  }
+
+  .innerWrapper {
+    @include innerWrapper();
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .leftBlock {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        text-decoration: none;
+        display: block;
+
+        @include desktop() {
+          margin-right: 123px;
+        }
+
+        img {
+          display: block;
+          width: 143px;
+          @include desktop() {
+            width: 178px;
+          }
+        }
+      }
+
+      .nav {
+        display: none;
+        @include desktop() {
+          display: flex;
+        }
+
+        .link {
+          text-decoration: none;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 26px;
+          position: relative;
+          transition: 0.2s;
+
+          border-bottom: 1px solid transparent;
+
+          &:not(:first-child) {
+            margin-left: 34px;
+          }
+
+          &:hover {
+            border-bottom: 1px solid #AEB054;
+            color: #AEB054;
+          }
+        }
+      }
+    }
+
+    .rightBlock {
+
+      .burgerButton {
+        cursor: pointer;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        z-index: 9999;
+
+        @include desktop() {
+          display: none;
+        }
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .button {
+        display: none;
+        @include desktop() {
+          display: block;
+          cursor: pointer;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          padding: 20px 26px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 100%;
+          background: rgba(255, 255, 255, 0.11);
+          border-radius: 6px;
+          transition: 0.2s;
+
+          &:hover {
+            background: #80A94A;
+            border: 1px solid transparent;
+          }
+        }
+
+
+      }
+
+    }
+
+
+  }
+}

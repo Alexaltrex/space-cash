@@ -1,0 +1,238 @@
+@import '../../assets/scss/app.scss';
+$fr: 67.5px;
+$gap: 30px;
+$margin: calc( (100vw - 1140px) * 0.5 );
+
+.firstBlock {
+  @include container();
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    @include onlyDesktop() {
+      position: absolute;
+      background: rgba(168, 156, 181, 0.06);
+      backdrop-filter: blur(9px);
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: calc(#{$margin} + 8 * (#{$fr} + #{$gap}));
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+      div:nth-child(1) {
+        position: absolute;
+        top: 0px;
+        right: calc(4 * (#{$gap + $fr}));
+        width: 1px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      div:nth-child(2) {
+        position: absolute;
+        top: 0px;
+        right: calc(8 * (#{$gap + $fr}));
+        width: 1px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+    }
+
+  }
+
+
+  .innerWrapper {
+    @include innerWrapper();
+
+    position: relative;
+
+    padding-top: calc(280px + 50px);
+    padding-bottom: 20px;
+
+    @include desktop() {
+      padding-top: calc(100px + 82px);
+      padding-bottom: 70px;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 125%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include bubble();
+
+      @include desktop() {
+        font-size: 50px;
+        text-align: left;
+        max-width: 654px;
+      }
+
+      span:last-child {
+        white-space: pre-wrap;
+        background-image: linear-gradient(90deg, #AEB253 0%, #73B45C 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+    }
+
+    .text {
+      margin-top: 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 180%;
+      text-align: center;
+      color: #BEBEBE;
+
+      @include bubble();
+
+      @include desktop() {
+        margin-top: 34px;
+        text-align: left;
+        max-width: 555px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+
+      @include bubble();
+
+      @include desktop() {
+        flex-direction: row;
+        margin-top: 42px;
+      }
+
+      button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 200px;
+        border-radius: 4px;
+        transition: 0.2s;
+
+        @include desktop() {
+          height: 54px;
+          width: 190px;
+          border-radius: 6px;
+        }
+
+        &:first-child {
+          border: none;
+          background: #AEB054;
+
+          &:hover {
+            background: #80A94A;
+          }
+        }
+
+        &:last-child {
+          margin-top: 16px;
+          background: transparent;
+          border: 1px solid #FFF;
+
+          &:hover {
+            background: #AEB054;
+            border: 1px solid transparent;
+          }
+
+          @include desktop() {
+            margin-top: 0px;
+            margin-left: 24px;
+          }
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 100%;
+          color: #FFFFFF;
+          @include desktop() {
+            font-size: 14px;
+          }
+        }
+
+        svg {
+          transform: rotate(45deg);
+          width: 17px;
+          height: 17px;
+          margin-left: 5px;
+          @include desktop() {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+      }
+    }
+
+    .bottom {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      @include bubble();
+
+      @include desktop() {
+        margin-top: 120px;
+      }
+
+
+      .left {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include desktop() {
+          display: flex;
+        }
+
+      }
+
+      .right {
+        display: none;
+        text-decoration: none;
+
+        @include desktop() {
+          display: flex;
+          align-items: center;
+        }
+
+        p {
+          white-space: nowrap;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 180%;
+          background-image: linear-gradient(90deg, #AEB253 0%, #73B45C 100%);
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-text-fill-color: transparent;
+        }
+
+        img {
+          width: 28px;
+          height: 28px;
+          margin-left: 8px;
+        }
+
+      }
+
+    }
+
+  }
+}

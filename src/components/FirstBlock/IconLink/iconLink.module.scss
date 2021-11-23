@@ -1,0 +1,57 @@
+@import '../../../assets/scss/app.scss';
+
+.iconLink {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+
+  &:hover {
+    p {
+      color: white;
+    }
+  }
+
+  @include desktop() {
+    flex-direction: row;
+    padding: 0px 38px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:not(:first-child) {
+    border-left: 1px solid rgba(255, 255, 255, 0.19);
+  }
+
+  img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    @include desktop() {
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 130%;
+    color: #8E8E8E;
+    margin-top: 5px;
+    @include desktop() {
+      margin-top: 0px;
+      margin-left: 10px;
+    }
+
+  }
+}

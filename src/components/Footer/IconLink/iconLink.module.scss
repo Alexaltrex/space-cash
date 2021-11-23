@@ -1,0 +1,38 @@
+@import '../../../assets/scss/app.scss';
+
+.iconLink {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(35px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s;
+  @include desktop() {
+    width: 54px;
+    height: 54px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+
+  &:hover {
+    border: 1px solid #AEB054;
+  }
+
+  img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    @include desktop() {
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+}

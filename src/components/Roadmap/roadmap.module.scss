@@ -1,0 +1,202 @@
+@import '../../assets/scss/app.scss';
+
+.roadmap {
+  @include container();
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 35px;
+  overflow: hidden;
+
+  @include desktop() {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
+  .right_2 {
+    @include onlyMobile() {
+      position: absolute;
+      width: 120px;
+      height: 107px;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+
+  .innerWrapper {
+    @include innerWrapper();
+    position: relative;
+
+    .men {
+      @include onlyDesktop() {
+        position: absolute;
+        width: 435px;
+        height: 760px;
+        top: 160px;
+        left: 50px;
+      }
+    }
+
+    @include desktop() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+    }
+
+    .firstBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include desktop() {
+        align-items: normal;
+      }
+
+      .title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 125%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        @include bubble();
+
+        @include desktop() {
+          font-size: 50px;
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 180%;
+        color: #BEBEBE;
+        margin-top: 16px;
+
+        @include bubble();
+
+        @include desktop() {
+          font-size: 15px;
+          margin-top: 16px;
+          max-width: 390px;
+        }
+      }
+    }
+
+    .secondBlock {
+      margin-top: 187px;
+      position: relative;
+
+      .men {
+        @include onlyMobile() {
+          z-index: -1;
+          position: absolute;
+          width: 246px;
+          height: 430px;
+          top: -200px;
+          left: calc(50% - 123px);
+        }
+      }
+
+      @include bubble();
+
+      @include desktop() {
+        margin-top: 0px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(25px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 20px;
+        @include desktop() {
+          padding: 40px;
+        }
+
+        &:not(:first-of-type) {
+          margin-top: 20px;
+          @include desktop() {
+            margin-top: 40px;
+          }
+        }
+
+        .cardHeader {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            @include desktop() {
+              font-size: 36px;
+            }
+          }
+
+          .number {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 125%;
+            letter-spacing: 0.03em;
+            -webkit-text-stroke: 1px #FFAF47;
+            color: transparent;
+            @include desktop() {
+              font-size: 46px;
+            }
+          }
+        }
+
+        .items {
+          margin-top: 10px;
+
+          .item {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+              margin-top: 12px;
+              @include desktop() {
+                margin-top: 30px;
+              }
+            }
+
+            svg {
+              fill: red;
+              width: 15px;
+              height: 15px;
+
+              path {
+                fill: red;
+              }
+
+              @include desktop() {
+                width: 24px;
+                height: 24px;
+              }
+            }
+
+            .text {
+              margin-left: 8px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 21px;
+              @include desktop() {
+                margin-left: 14px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,56 @@
+@mixin desktop {
+  @media all and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin onlyDesktop {
+  display: none;
+
+  @include desktop() {
+    display: block;
+    @content;
+  }
+}
+
+@mixin onlyMobile {
+  display: block;
+  @content;
+  @include desktop() {
+    display: none;
+  }
+}
+
+@mixin container {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include desktop() {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@mixin container-small {
+  padding-left: 50px;
+  padding-right: 50px;
+  @include desktop() {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@mixin innerWrapper {
+  @include desktop() {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@mixin bubble {
+  transition: transform 0.3s;
+  transform: translateY(1000%);
+  &_intersected {
+    transform: translateY(0%);
+  }
+};
+
