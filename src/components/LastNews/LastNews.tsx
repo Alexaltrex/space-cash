@@ -94,7 +94,6 @@ SwiperCore.use([Navigation, Pagination]);
 
 export const LastNews: FC = () => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-    console.log(activeSlideIndex);
     const refMap: TRefMap = {
         // @ts-ignore
         prev: useRef<HTMLButtonElement>(null),
@@ -235,18 +234,19 @@ export const LastNews: FC = () => {
                         {
                             slides.map(({src, text, data, href}, index) => (
                                 <SwiperSlide className={style.slide} key={index}>
-                                    <div className={style.top}>
-                                        <img src={src} alt=""/>
-                                        <p className={style.text}>{text}</p>
+                                    <div className={style.innerWrapper}>
+                                        <div className={style.top}>
+                                            <img src={src} alt=""/>
+                                            <p className={style.text}>{text}</p>
+                                        </div>
+                                        <div className={style.bottom}>
+                                            <a href={href}>
+                                                <span>Read more</span>
+                                                <img src={arrow} alt=""/>
+                                            </a>
+                                            <p className={style.data}>{data}</p>
+                                        </div>
                                     </div>
-                                    <div className={style.bottom}>
-                                        <a href={href}>
-                                            <span>Read more</span>
-                                            <img src={arrow} alt=""/>
-                                        </a>
-                                        <p className={style.data}>{data}</p>
-                                    </div>
-
                                 </SwiperSlide>
                             ))
                         }

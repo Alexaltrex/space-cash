@@ -24,6 +24,7 @@
 @mixin container {
   padding-left: 20px;
   padding-right: 20px;
+  box-sizing: border-box;
   @include desktop() {
     padding-left: 0px;
     padding-right: 0px;
@@ -53,4 +54,16 @@
     transform: translateY(0%);
   }
 };
+
+@mixin button-full-active {
+  background: linear-gradient(270deg, #62A74A 5.26%, #FFAF46 102.37%);
+}
+
+@mixin button-full-hover {
+  background: linear-gradient(270deg, #62A74A 5.26%, #A0AA49 102.37%);
+}
+
+@mixin button-outline-hover {
+  background: linear-gradient(270deg, #62A74A 5.26%, #A0AA49 102.37%);
+}
 

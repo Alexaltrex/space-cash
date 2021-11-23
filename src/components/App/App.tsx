@@ -35,6 +35,7 @@ const App = () => {
         const deltaY = Number(((e.clientY - 0.5 * h) / (0.5 * h)).toFixed(1))
         setDeltaX(deltaX);
         setDeltaY(deltaY);
+        console.log(deltaY);
     };
 
     const onMouseMoveThrottle = throttle(onMouseMoveHandler, 100);
@@ -72,21 +73,27 @@ const App = () => {
             </div>
 
             <div className={style.animateObjects}
-                 style={{
-                     transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
-                 }}
+
             >
-                <img src={left_1} className={style.left_1}/>
-                <img src={right_1} className={style.right_1}/>
-                <img src={right_2} className={style.right_2}/>
-                <img src={left_2} className={style.left_2}/>
-                <img src={right_3} className={style.right_3}/>
-                <img src={right_1} className={style.left_3}/>
+                <div className={style.innerWrapper}
+                     style={{
+                         transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
+                     }}
+                >
+                    <img src={left_1} className={style.left_1}/>
+                    <img src={right_1} className={style.right_1}/>
+                    <img src={right_2} className={style.right_2}/>
+                    <img src={left_2} className={style.left_2}/>
+                    <img src={right_3} className={style.right_3}/>
+                    <img src={right_1} className={style.left_3}/>
+                </div>
+
             </div>
 
             <Header isBurgerIsOpen={isBurgerIsOpen}
                     setBurgerIsOpen={() => setBurgerIsOpen(!isBurgerIsOpen)}
             />
+
             <FirstBlock/>
             <Moon/>
             <Tokenomics/>

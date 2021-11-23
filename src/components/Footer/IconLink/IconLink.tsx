@@ -1,13 +1,15 @@
 import React, {FC, useState} from "react";
 import style from './iconLink.module.scss'
+import {SvgIcon} from "../../SvgIcon/SvgIcon";
 
 interface IIconLink {
     href: string
-    icon: string
-    icon_hover: string
+    icon: any
+    icon_hover: any
+    isPng?: boolean
 }
 
-export const IconLink: FC<IIconLink> = ({href, icon, icon_hover}) => {
+export const IconLink: FC<IIconLink> = ({href, icon, icon_hover, isPng = false}) => {
     const [hover, setHover] = useState(false);
     const onMouseEnterHandler = () => setHover(true);
     const onMouseLeaveHandler = () => setHover(false);
@@ -18,7 +20,11 @@ export const IconLink: FC<IIconLink> = ({href, icon, icon_hover}) => {
            onMouseEnter={onMouseEnterHandler}
            onMouseLeave={onMouseLeaveHandler}
         >
-            <img src={hover ? icon_hover : icon} alt=""/>
+            {
+                isPng
+                    ? <img src={hover ? icon_hover : icon} alt=""/>
+                    : hover ? icon_hover : icon
+            }
         </a>
     )
 };

@@ -4,16 +4,9 @@ import {links} from "../Header/Header";
 import mask from '../../assets/img/png/footer-mask.png';
 import {SvgIcon} from "../SvgIcon/SvgIcon";
 import {IconLink} from "./IconLink/IconLink";
-import icon_0 from '../../assets/img/png/icon_0.png';
 import icon_1 from '../../assets/img/png/icon_1.png';
-import icon_2 from '../../assets/img/png/icon_2.png';
-import icon_3 from '../../assets/img/png/icon_3.png';
-
-import icon_0_hover from '../../assets/img/png/icon_0_hover.png';
 import icon_1_hover from '../../assets/img/png/icon_1_hover.png';
-import icon_2_hover from '../../assets/img/png/icon_2_hover.png';
-import icon_3_hover from '../../assets/img/png/icon_3_hover.png';
-
+import {icon_0, icon_0_hover, icon_2, icon_2_hover, icon_3, icon_3_hover} from "./IconLink/icons";
 
 interface IIconLinks {
     icon: any
@@ -38,8 +31,6 @@ export const Footer: FC = () => {
                  }}
             />
 
-
-
             <div className={style.topBlock}>
                 <div className={style.innerWrapper}>
 
@@ -62,7 +53,7 @@ export const Footer: FC = () => {
                         <div className={style.icons}>
                             {
                                 iconLinks.map(({href, icon}, index) => (
-                                    <IconLink key={index} {...iconLinks[index]} />
+                                    <IconLink key={index} {...iconLinks[index]} isPng={index === 1 ? true : false} />
                                 ))
                             }
 
