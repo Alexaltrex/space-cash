@@ -1,0 +1,16 @@
+.anim {
+    animation: cosmonaut 5s ease infinite;
+}
+
+@keyframes cosmonaut {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
