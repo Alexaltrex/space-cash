@@ -18,27 +18,7 @@ $margin: calc( (100vw - 1140px) * 0.5 );
       left: 0px;
       width: calc(#{$margin} + 8 * (#{$fr} + #{$gap}));
       border-right: 1px solid rgba(255, 255, 255, 0.1);
-
-      div:nth-child(1) {
-        position: absolute;
-        top: 0px;
-        right: calc(4 * (#{$gap + $fr}));
-        width: 1px;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      div:nth-child(2) {
-        position: absolute;
-        top: 0px;
-        right: calc(8 * (#{$gap + $fr}));
-        width: 1px;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.1);
-      }
-
     }
-
   }
 
 
@@ -49,11 +29,30 @@ $margin: calc( (100vw - 1140px) * 0.5 );
 
     padding-top: calc(280px + 50px);
     padding-bottom: 20px;
+    box-sizing: border-box;
+
 
     @include desktop() {
       padding-top: calc(100px + 82px);
       padding-bottom: 70px;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 100vh;
     }
+
+    &:before {
+
+      @include onlyDesktop() {
+        position: absolute;
+        top: 0;
+        left: 190px + 24px + 190px;
+        height: 100%;
+        width: 1px;
+        content: "";
+        display: block;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
 
     .title {
       font-style: normal;

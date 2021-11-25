@@ -1,12 +1,9 @@
 import React, {FC, useEffect, useRef, useState} from "react";
 import style from './moon.module.scss'
-import imgMobile1 from '../../assets/img/png/moon-mobile-1.png';
-import imgMobile2 from '../../assets/img/png/moon-mobile-2.png';
-import imgMobile3 from '../../assets/img/png/moon-mobile-3.png';
 import imgPlanet from '../../assets/img/png/moon-planet.png';
 import right_1 from '../../assets/img/png/objects/right_1.png';
 import useIntersectionObserver from "@react-hook/intersection-observer";
-import {bubble, time} from "../../consts/consts";
+import {time} from "../../consts/consts";
 import clsx from "clsx";
 
 
@@ -40,7 +37,7 @@ export const Moon: FC = () => {
     const {isIntersecting} = useIntersectionObserver(
         ref,
         {
-            threshold: 0.5
+            threshold: 0.3
         }
     );
     const [intersected, setIntersected] = useState(false);
@@ -97,7 +94,7 @@ export const Moon: FC = () => {
                 <div className={style.imgBlur}/>
             </div>
 
-            {/*<img src={right_1} className={style.right_1}/>*/}
+            <img src={right_1} className={style.right_1}/>
 
 
         </div>

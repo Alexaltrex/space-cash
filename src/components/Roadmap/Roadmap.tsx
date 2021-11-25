@@ -19,7 +19,7 @@ interface ICard {
     items: IItem[]
 }
 
-const cards = [
+const cards: ICard[] = [
     {
         title: 'Development',
         number: '01',
@@ -68,7 +68,6 @@ export const Roadmap: FC = () => {
 
 
     useEffect(() => {
-        let id: any;
         if (isIntersecting) {
             setIntersected(true);
             setTimeout(() => {

@@ -225,7 +225,7 @@ export const LastNews: FC = () => {
                                     slidesPerView: 1,
                                     spaceBetween: 20,
                                 },
-                                1920: {
+                                1340: {
                                     slidesPerView: 3,
                                     spaceBetween: 30,
                                 },

@@ -8,9 +8,10 @@
   align-items: center;
 
   &:hover {
-    p {
-      color: white;
+    p, img, svg {
+      opacity: 1;
     }
+
   }
 
   @include desktop() {
@@ -30,7 +31,9 @@
     border-left: 1px solid rgba(255, 255, 255, 0.19);
   }
 
-  img {
+  img, svg {
+    transition: 0.3s;
+    opacity: 0.5;
     display: block;
     width: 18px;
     height: 18px;
@@ -38,15 +41,16 @@
       width: 24px;
       height: 24px;
     }
-
   }
 
   p {
+    transition: 0.3s;
+    opacity: 0.5;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 130%;
-    color: #8E8E8E;
+    color: #FFF;
     margin-top: 5px;
     @include desktop() {
       margin-top: 0px;

@@ -64,12 +64,12 @@ const App = () => {
             />
 
             <div className={style.notAnimateObjects}>
-                <img src={left_na_1} className={style.left_na_1}/>
-                <img src={right_na_1} className={style.right_na_1}/>
-                <img src={right_na_2} className={style.right_na_2}/>
-                <img src={left_na_2} className={style.left_na_2}/>
-                <img src={right_na_3} className={style.right_na_3}/>
-                <img src={left_na_3} className={style.left_na_3}/>
+                <img src={left_na_1} className={style.left_na_1} alt=''/>
+                <img src={right_na_1} className={style.right_na_1} alt=''/>
+                <img src={right_na_2} className={style.right_na_2} alt=''/>
+                <img src={left_na_2} className={style.left_na_2} alt=''/>
+                <img src={right_na_3} className={style.right_na_3} alt=''/>
+                <img src={left_na_3} className={style.left_na_3} alt=''/>
             </div>
 
             <div className={style.animateObjects}
@@ -80,12 +80,12 @@ const App = () => {
                          transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
                      }}
                 >
-                    <img src={left_1} className={style.left_1}/>
-                    <img src={right_1} className={style.right_1}/>
-                    <img src={right_2} className={style.right_2}/>
-                    <img src={left_2} className={style.left_2}/>
-                    <img src={right_3} className={style.right_3}/>
-                    <img src={right_1} className={style.left_3}/>
+                    <img src={left_1} className={style.left_1} alt=''/>
+                    <img src={right_1} className={style.right_1} alt=''/>
+                    <img src={right_2} className={style.right_2} alt=''/>
+                    <img src={left_2} className={style.left_2} alt=''/>
+                    <img src={right_3} className={style.right_3} alt=''/>
+                    <img src={right_1} className={style.left_3} alt=''/>
                 </div>
 
             </div>

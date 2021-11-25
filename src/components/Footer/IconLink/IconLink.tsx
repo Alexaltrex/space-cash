@@ -1,6 +1,5 @@
 import React, {FC, useState} from "react";
 import style from './iconLink.module.scss'
-import {SvgIcon} from "../../SvgIcon/SvgIcon";
 
 interface IIconLink {
     href: string

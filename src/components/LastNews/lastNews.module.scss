@@ -241,6 +241,11 @@
             opacity: 0.5;
           }
 
+          &:hover:not(:disabled) {
+            border: 1px solid transparent;
+            background: #7DA94A;
+          }
+
           svg {
             width: 24px;
             height: 24px;

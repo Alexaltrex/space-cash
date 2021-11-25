@@ -1,23 +1,23 @@
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import style from './iconLink.module.scss';
 
 interface IIconLink {
     href: string
-    src: string
-    src_hover: string
+    src: any
     text: string
+    isPng?: boolean
 }
 
-export const IconLink: FC<IIconLink> = ({href, text, src, src_hover}) => {
-    const [hover, setHover] = useState(false)
-
+export const IconLink: FC<IIconLink> = ({href, text, src, isPng = false}) => {
     return (
         <a href={href}
            className={style.iconLink}
-           onMouseEnter={() => setHover(true)}
-           onMouseLeave={() => setHover(false)}
         >
-            <img src={hover ? src_hover : src} alt=""/>
+            {
+                isPng
+                    ? <img src={src} alt=""/>
+                    : src
+            }
             <p>{text}</p>
         </a>
     )

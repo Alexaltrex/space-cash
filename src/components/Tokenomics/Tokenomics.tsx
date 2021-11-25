@@ -3,7 +3,7 @@ import style from './tokenomics.module.scss'
 import {SvgIcon} from "../SvgIcon/SvgIcon";
 import chart from '../../assets/img/png/chart.png';
 import useIntersectionObserver from "@react-hook/intersection-observer";
-import {bubble, time} from "../../consts/consts";
+import {time} from "../../consts/consts";
 import clsx from "clsx";
 
 interface IItem {
@@ -35,14 +35,13 @@ export const Tokenomics: FC = () => {
     const {isIntersecting} = useIntersectionObserver(
         ref,
         {
-            threshold: 1
+            threshold: 0.3
         }
     );
     const [intersected, setIntersected] = useState(false);
     const [intersected_1, setIntersected_1] = useState(false);
 
     useEffect(() => {
-        let id: any;
         if (isIntersecting) {
             setIntersected(true);
             setTimeout(() => {

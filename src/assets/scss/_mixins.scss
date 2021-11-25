@@ -1,5 +1,5 @@
 @mixin desktop {
-  @media all and (min-width: 1920px) {
+  @media all and (min-width: 1340px) {
     @content;
   }
 }
@@ -48,10 +48,10 @@
 }
 
 @mixin bubble {
-  transition: transform 0.3s;
-  transform: translateY(1000%);
+  transition: transform 1.0s ease-out;
+  transform: translateY(500%) scaleY(1);
   &_intersected {
-    transform: translateY(0%);
+    transform: translateY(0%) scaleY(1);
   }
 };
 

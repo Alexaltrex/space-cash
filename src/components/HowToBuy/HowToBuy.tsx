@@ -67,7 +67,6 @@ export const HowToBuy: FC = () => {
     const [intersected_2, setIntersected_2] = useState(false);
 
     useEffect(() => {
-        let id: any;
         if (isIntersecting) {
             setIntersected(true);
             setTimeout(() => {
