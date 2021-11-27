@@ -87,19 +87,9 @@ export const FirstBlock = () => {
     return (
         <section className={style.firstBlock} ref={ref}>
 
-            {/*<div className={style.videoWrapper}>*/}
-            {/*    <ReactPlayer*/}
-            {/*        className={style.video}*/}
-            {/*        url={process.env.REACT_APP_ROCKET_SRC}*/}
-            {/*        width='100%'*/}
-            {/*        height='100%'*/}
-            {/*        playing={true}*/}
-            {/*        loop={true}*/}
-            {/*        muted={true}*/}
-            {/*    />*/}
-            {/*</div>*/}
-
             <div className={style.mask}/>
+
+
 
             <div className={style.innerWrapper}>
 

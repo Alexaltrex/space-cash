@@ -22,19 +22,6 @@ $margin: calc( (100vw - 1140px) * 0.5 );
     }
   }
 
-  //.videoWrapper {
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  bottom: 0;
-  //  right: 0;
-  //
-  //  video {
-  //    object-fit: cover;
-  //  }
-  //}
-
-
   .innerWrapper {
     @include innerWrapper();
 

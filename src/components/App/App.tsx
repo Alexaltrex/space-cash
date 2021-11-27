@@ -130,16 +130,7 @@ const App = () => {
 
             </div>
 
-            <div className={style.animatedObjectsUpper}>
-                <div className={style.innerWrapper}
-                     style={{
-                         transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
-                     }}
-                >
-                  <img src={coin1} className={style.coin_left_1} alt=''/>
-                </div>
-
-            </div>
+            <img src={coin1} className={style.animatedObjectsUpper} alt=''/>
 
             <Header isBurgerIsOpen={isBurgerIsOpen}
                     setBurgerIsOpen={() => setBurgerIsOpen(!isBurgerIsOpen)}

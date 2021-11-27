@@ -336,36 +336,14 @@
   }
 
   .animatedObjectsUpper {
-    z-index: 50;
-    overflow: hidden;
-    transition: 0.3s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    .innerWrapper {
-      overflow: hidden;
-      transition: 0.3s;
+    @include onlyDesktop() {
+      z-index: 50;
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-
-      .coin_left_1 {
-        @include onlyDesktop() {
-          position: absolute;
-          width: 210px;
-          height: 176px;
-          top: calc(100vh - 280px);
-          left: calc(50% - 760px);
-        }
-      }
-
+      width: 210px;
+      height: 176px;
+      top: calc(100vh - 280px);
+      left: calc(50% - 760px);
     }
-
   }
 
   .burgerButton {
