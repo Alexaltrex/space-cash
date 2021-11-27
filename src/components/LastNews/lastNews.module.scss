@@ -4,6 +4,7 @@
   @include container();
   position: relative;
   overflow: hidden;
+  z-index: 40;
 
   padding-top: 60px;
   padding-bottom: 70px;
@@ -413,7 +414,15 @@
           left: -70px;
         }
       }
-
+      .coin1 {
+        @include onlyMobile() {
+          width: 100px;
+          z-index: -1;
+          position: absolute;
+          bottom: -90px;
+          left: -0px;
+        }
+      }
 
       button {
         cursor: pointer;

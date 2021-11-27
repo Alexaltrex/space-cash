@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   padding-top: 60px;
+  z-index: 40;
 
   .innerWrapper {
     @include innerWrapper();

@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   padding-top: 60px;
+  z-index: 40;
 
   @include desktop() {
     padding-top: 200px;
@@ -71,7 +72,7 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 180%;
-        color: #FFF;//#BEBEBE;
+        color: #FFF; //#BEBEBE;
         margin-top: 12px;
         @include desktop() {
           font-size: 15px;
@@ -114,12 +115,30 @@
 
   .right_1 {
     @include onlyMobile() {
-      //z-index: -1;
       position: absolute;
       bottom: 7px;
-      right: 5px;
+      right: -100px;
     }
   }
+  .coin1 {
+    @include onlyMobile() {
+      position: absolute;
+      width: 150px;
+      z-index: -1;
+      top: 56px;
+      right: -52px;
+    }
+  }
+  .coin2 {
+    @include onlyMobile() {
+      position: absolute;
+      width: 150px;
+      z-index: -1;
+      top: 348px;
+      left: -70px;
+    }
+  }
+
 
   .imgMobile2 {
     //z-index: -1;

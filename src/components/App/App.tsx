@@ -23,6 +23,13 @@ import left_na_2 from '../../assets/img/png/objects/not-animated/left_na_2.png';
 import right_na_3 from '../../assets/img/png/objects/not-animated/right_na_3.png';
 import left_na_3 from '../../assets/img/png/objects/not-animated/left_na_3.png';
 
+import coin1 from '../../assets/img/gif/coin1.gif';
+import coin2 from '../../assets/img/gif/coin2.gif';
+import coin3 from '../../assets/img/gif/coin3.gif';
+import coin4 from '../../assets/img/gif/coin4.gif';
+import coin5 from '../../assets/img/gif/coin5.gif';
+import ReactPlayer from "react-player";
+
 const App = () => {
     const [isBurgerIsOpen, setBurgerIsOpen] = useState(false);
     const [deltaX, setDeltaX] = useState(0);
@@ -35,7 +42,6 @@ const App = () => {
         const deltaY = Number(((e.clientY - 0.5 * h) / (0.5 * h)).toFixed(1))
         setDeltaX(deltaX);
         setDeltaY(deltaY);
-        console.log(deltaY);
     };
 
     const onMouseMoveThrottle = throttle(onMouseMoveHandler, 100);
@@ -57,6 +63,19 @@ const App = () => {
                         onClickHandler={() => setBurgerIsOpen(false)}
             />
 
+            <div className={style.videoWrapper}>
+                <ReactPlayer
+                    className={style.video}
+                    url={process.env.REACT_APP_ROCKET_SRC}
+                    width='100%'
+                    height='100%'
+                    playing={true}
+                    loop={true}
+                    muted={true}
+                />
+            </div>
+
+
             <div className={style.stars}
                  style={{
                      backgroundImage: `url(${stars})`,
@@ -72,20 +91,52 @@ const App = () => {
                 <img src={left_na_3} className={style.left_na_3} alt=''/>
             </div>
 
-            <div className={style.animateObjects}
-
-            >
+            <div className={style.animatedObjectsLower}>
                 <div className={style.innerWrapper}
                      style={{
                          transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
                      }}
                 >
+                    {/*stone*/}
                     <img src={left_1} className={style.left_1} alt=''/>
                     <img src={right_1} className={style.right_1} alt=''/>
                     <img src={right_2} className={style.right_2} alt=''/>
                     <img src={left_2} className={style.left_2} alt=''/>
                     <img src={right_3} className={style.right_3} alt=''/>
                     <img src={right_1} className={style.left_3} alt=''/>
+
+                    {/*coin*/}
+
+                    {/*left*/}
+                    <img src={coin3} className={style.coin_left_1} alt=''/>
+                    <img src={coin2} className={style.coin_left_2} alt=''/>
+                    <img src={coin4} className={style.coin_left_3} alt=''/>
+                    <img src={coin5} className={style.coin_left_4} alt=''/>
+                    <img src={coin3} className={style.coin_left_5} alt=''/>
+                    <img src={coin4} className={style.coin_left_6} alt=''/>
+                    <img src={coin5} className={style.coin_left_7} alt=''/>
+
+                    {/*right*/}
+                    <img src={coin4} className={style.coin_right_1} alt=''/>
+                    <img src={coin5} className={style.coin_right_2} alt=''/>
+                    <img src={coin2} className={style.coin_right_3} alt=''/>
+                    <img src={coin5} className={style.coin_right_4} alt=''/>
+                    <img src={coin3} className={style.coin_right_5} alt=''/>
+                    <img src={coin4} className={style.coin_right_6} alt=''/>
+                    <img src={coin4} className={style.coin_right_7} alt=''/>
+                    <img src={coin2} className={style.coin_right_8} alt=''/>
+                    <img src={coin1} className={style.coin_right_9} alt=''/>
+                </div>
+
+            </div>
+
+            <div className={style.animatedObjectsUpper}>
+                <div className={style.innerWrapper}
+                     style={{
+                         transform: `translate(${deltaX * 10}px, ${deltaY * 10}px)`,
+                     }}
+                >
+                  <img src={coin1} className={style.coin_left_1} alt=''/>
                 </div>
 
             </div>

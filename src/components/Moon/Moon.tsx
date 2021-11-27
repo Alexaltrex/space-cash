@@ -5,7 +5,8 @@ import right_1 from '../../assets/img/png/objects/right_1.png';
 import useIntersectionObserver from "@react-hook/intersection-observer";
 import {time} from "../../consts/consts";
 import clsx from "clsx";
-
+import coin1 from '../../assets/img/gif/coin1.gif';
+import coin2 from '../../assets/img/gif/coin2.gif';
 
 interface ICard {
     title: string
@@ -95,8 +96,8 @@ export const Moon: FC = () => {
             </div>
 
             <img src={right_1} className={style.right_1}/>
-
-
+            <img src={coin1} className={style.coin1}/>
+            <img src={coin2} className={style.coin2}/>
         </div>
     )
 }

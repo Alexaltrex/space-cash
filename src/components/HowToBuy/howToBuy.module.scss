@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  z-index: 40;
 
   @include desktop() {
     padding-top: 100px;
@@ -72,15 +72,11 @@
     .cards {
       position: relative;
       margin-top: 32px;
-      //display: flex;
-      //flex-direction: column;
-      //align-items: stretch;
 
       @include bubble();
 
       @include desktop() {
         margin-top: 50px;
-        //width: 945px;
         padding: 0px calc(#{$fr} + #{$gap});
       }
 
@@ -93,6 +89,43 @@
           left: -135px;
         }
       }
+      .coin2 {
+        @include onlyMobile() {
+          width: 100px;
+          z-index: -1;
+          position: absolute;
+          top: -140px;
+          left: -40px;
+        }
+      }
+      .coin3 {
+        @include onlyMobile() {
+          width: 100px;
+          z-index: -1;
+          position: absolute;
+          top: 250px;
+          right: -45px;
+        }
+      }
+      .coin4 {
+        @include onlyMobile() {
+          width: 100px;
+          z-index: -1;
+          position: absolute;
+          bottom: 230px;
+          left: -45px;
+        }
+      }
+      .coin5 {
+        @include onlyMobile() {
+          width: 100px;
+          z-index: -1;
+          position: absolute;
+          bottom: -43px;
+          right: -45px;
+        }
+      }
+
 
       .card {
         backdrop-filter: blur(9px);
@@ -110,8 +143,6 @@
 
         @include desktop() {
           padding: 35px 40px 40px 50px;
-          //align-items: center;
-          //width: 100%;
         }
 
         &:not(:first-child) {
@@ -150,6 +181,7 @@
           height: 40px;
           border-radius: 6px;
           margin-right: 14px;
+
           @include desktop() {
             width: 75px;
             height: 75px;
@@ -184,6 +216,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
+
             @include desktop() {
               font-size: 14px;
             }
@@ -197,6 +230,7 @@
             text-transform: uppercase;
             color: #F3F3F3;
             margin-top: 7px;
+
             @include desktop() {
               font-size: 26px;
               margin-top: 8px;
@@ -211,6 +245,7 @@
             line-height: 180%;
             color: #BEBEBE;
             word-break: break-all;
+
             @include desktop() {
               margin-top: 16px;
               font-size: 15px;

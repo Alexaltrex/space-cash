@@ -48,10 +48,13 @@
 }
 
 @mixin bubble {
-  transition: transform 1.0s ease-out;
-  transform: translateY(500%) scaleY(1);
+  transition: transform 0.5s ease-out;
+  transform: scaleY(0.0001);
+  //transform: translateY(1000%);
+  transform-origin: bottom center;
   &_intersected {
-    transform: translateY(0%) scaleY(1);
+    transform: scale(1);
+    //transform: translateY(0%);
   }
 };
 

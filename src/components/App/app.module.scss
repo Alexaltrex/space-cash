@@ -14,6 +14,7 @@
   }
 
   .stars {
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +22,21 @@
     height: 100%;
   }
 
+  .videoWrapper {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+
+    video {
+      object-fit: cover;
+    }
+  }
+
   .notAnimateObjects {
+    z-index: 30;
     overflow: hidden;
     transition: 0.3s;
     position: absolute;
@@ -29,34 +44,32 @@
     left: 0;
     bottom: 0;
     right: 0;
-    //width: 100%;
-    //height: 100%;
 
     .left_na_1 {
       @include onlyDesktop() {
         position: absolute;
-        top: 612px;
+        top: calc(100vh - 768px + 612px);
         left: calc(50% - 955px);
       }
     }
     .right_na_1 {
       @include onlyDesktop() {
         position: absolute;
-        top: 1180px;
+        top: calc(100vh - 768px + 1180px);
         right: 0;
       }
     }
     .right_na_2 {
       @include onlyDesktop() {
         position: absolute;
-        top: 2140px;
+        top: calc(2140px + 100vh - 768px);
         right: 0;
       }
     }
     .left_na_2 {
       @include onlyDesktop() {
         position: absolute;
-        top: 3615px;
+        top: calc(3615px + 100vh - 768px);
         left: 0;
       }
     }
@@ -77,7 +90,8 @@
 
   }
 
-  .animateObjects {
+  .animatedObjectsLower {
+    z-index: 30;
     overflow: hidden;
     transition: 0.3s;
     position: absolute;
@@ -100,7 +114,7 @@
            position: absolute;
            width: 193px;
            height: 173px;
-           top: 1435px;
+           top: calc(1435px + 100vh - 768px);
            left: calc(50% - 670px);
          }
        }
@@ -110,7 +124,7 @@
           position: absolute;
           width: 170px;
           height: 165px;
-          top: 885px;
+          top: calc(885px + 100vh - 768px);
           left: calc(50% + 450px);
         }
       }
@@ -120,7 +134,7 @@
           position: absolute;
           width: 319px;
           height: 282px;
-          top: 3270px;
+          top: calc(3270px + 100vh - 768px);
           left: calc(50% + 400px);
         }
       }
@@ -130,7 +144,7 @@
           position: absolute;
           width: 225px;
           height: 178px;
-          top: 3950px;
+          top: calc(3950px + 100vh - 768px);
           left: calc(50% - 725px);
         }
       }
@@ -140,7 +154,7 @@
           position: absolute;
           width: 149px;
           height: 139px;
-          top: 5440px;
+          top: calc(5440px + 100vh - 768px);
           left: calc(50% + 500px);
         }
       }
@@ -150,8 +164,170 @@
           position: absolute;
           width: 210px;
           height: 176px;
-          top: 5805px;
+          top: calc(5805px + 100vh - 768px);
           left: calc(50% - 715px);
+        }
+      }
+
+      .coin_left_1 {
+         @include onlyDesktop() {
+           z-index: 0;
+           position: absolute;
+           width: 210px;
+           height: 176px;
+           top: calc(100vh - 700px);
+           left: calc(50% - 785px);
+         }
+       }
+      .coin_left_2 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 220px);
+          left: calc(50% - 770px);
+        }
+      }
+      .coin_left_3 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 1300px);
+          left: calc(50% - 770px);
+        }
+      }
+      .coin_left_4 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 2500px);
+          left: calc(50% - 530px);
+        }
+      }
+      .coin_left_5 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 4000px);
+          left: calc(50% - 700px);
+        }
+      }
+      .coin_left_6 {
+         @include onlyDesktop() {
+           z-index: 0;
+           position: absolute;
+           width: 210px;
+           height: 176px;
+           top: calc(100vh + 4575px);
+           left: calc(50% - 690px);
+         }
+       }
+      .coin_left_7 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 5222px);
+          left: calc(50% - 547px);
+        }
+      }
+
+      .coin_right_1 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh - 900px);
+          left: calc(50% + 100px);
+        }
+      }
+      .coin_right_2 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh - 600px);
+          left: calc(50% + 670px);
+        }
+      }
+      .coin_right_3 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh - 460px);
+          left: calc(50% - 60px);
+        }
+      }
+      .coin_right_4 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 725px);
+          left: calc(50% + 460px);
+        }
+      }
+      .coin_right_5 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 1535px);
+          left: calc(50% + 475px);
+        }
+      }
+      .coin_right_6 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 2272px);
+          left: calc(50% - 105px);
+        }
+      }
+      .coin_right_7 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 3540px);
+          left: calc(50% + 510px);
+        }
+      }
+      .coin_right_8 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 4115px);
+          left: calc(50% + 360px);
+        }
+      }
+      .coin_right_9 {
+        @include onlyDesktop() {
+          z-index: 0;
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh + 5218px);
+          left: calc(50% + 490px);
         }
       }
 
@@ -159,7 +335,38 @@
 
   }
 
+  .animatedObjectsUpper {
+    z-index: 50;
+    overflow: hidden;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
+    .innerWrapper {
+      overflow: hidden;
+      transition: 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      .coin_left_1 {
+        @include onlyDesktop() {
+          position: absolute;
+          width: 210px;
+          height: 176px;
+          top: calc(100vh - 280px);
+          left: calc(50% - 760px);
+        }
+      }
+
+    }
+
+  }
 
   .burgerButton {
     border: 0;

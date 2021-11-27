@@ -12,6 +12,8 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import right_3 from '../../assets/img/png/objects/right_3.png';
 import right_1 from '../../assets/img/png/objects/right_1.png';
+import coin1 from '../../assets/img/gif/coin1.gif';
+
 
 import SwiperCore, {Navigation, Pagination} from 'swiper';
 
@@ -256,6 +258,7 @@ export const LastNews: FC = () => {
                 <div className={style.buttons}>
 
                     <img src={right_1} className={style.right_1}/>
+                    <img src={coin1} className={style.coin1}/>
 
                     <button className={style.first}>
                         <span>Media Request</span>

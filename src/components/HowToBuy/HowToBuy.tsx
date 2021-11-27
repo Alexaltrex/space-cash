@@ -5,6 +5,11 @@ import left_2 from '../../assets/img/png/objects/left_2.png';
 import useIntersectionObserver from "@react-hook/intersection-observer";
 import {time} from "../../consts/consts";
 import clsx from "clsx";
+import coin2 from '../../assets/img/gif/coin2.gif';
+import coin3 from '../../assets/img/gif/coin3.gif';
+import coin4 from '../../assets/img/gif/coin4.gif';
+import coin5 from '../../assets/img/gif/coin5.gif';
+
 
 interface iCard {
     icon: string
@@ -110,6 +115,10 @@ export const HowToBuy: FC = () => {
                 >
 
                     <img src={left_2} className={style.left_2}/>
+                    <img src={coin2} className={style.coin2}/>
+                    <img src={coin3} className={style.coin3}/>
+                    <img src={coin4} className={style.coin4}/>
+                    <img src={coin5} className={style.coin5}/>
 
                     {
                         cards.map(({step, text, title, icon}, index) => (

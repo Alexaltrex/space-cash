@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import style from './header.module.scss';
 import {SvgIcon} from "../SvgIcon/SvgIcon";
+import {HashLink} from 'react-router-hash-link';
 
 export interface IHeader {
     setBurgerIsOpen: () => void
@@ -91,12 +92,12 @@ export const Header: FC<IHeader> = ({setBurgerIsOpen, isBurgerIsOpen}) => {
                         {
                             links.map(
                                 ({text, link}, index) => (
-                                    <a className={style.link}
+                                    <HashLink className={style.link}
                                        key={index}
-                                       href={`#${link}`}
+                                       to={`/#${link}`}
                                     >
                                         {text}
-                                    </a>
+                                    </HashLink>
                                 )
                             )
                         }

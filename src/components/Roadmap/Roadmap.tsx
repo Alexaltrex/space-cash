@@ -7,6 +7,11 @@ import clsx from "clsx";
 import right_2 from '../../assets/img/png/objects/right_2.png'
 import useIntersectionObserver from "@react-hook/intersection-observer";
 import {time} from "../../consts/consts";
+import coin3 from '../../assets/img/gif/coin3.gif';
+import coin4 from '../../assets/img/gif/coin4.gif';
+
+
+
 
 interface IItem {
     text: string
@@ -88,6 +93,8 @@ export const Roadmap: FC = () => {
         >
 
             <img src={right_2} className={style.right_2}/>
+            <img src={coin3} className={style.coin1}/>
+            <img src={coin4} className={style.coin2}/>
 
             <div className={style.innerWrapper}>
 

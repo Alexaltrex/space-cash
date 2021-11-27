@@ -2,8 +2,9 @@
 
 .footer {
   background: linear-gradient(0deg, #111E27, #111E27), rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(35px);
+  backdrop-filter: blur(9px);
   position: relative;
+  z-index: 40;
 
   .mask {
     z-index: 1;
