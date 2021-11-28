@@ -62,6 +62,7 @@
         font-size: 16px;
         line-height: 140%;
         color: #F3F3F3;
+        text-transform: uppercase;
         @include desktop() {
           font-size: 26px;
         }
