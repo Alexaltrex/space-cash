@@ -92,7 +92,6 @@ export const Moon: FC = () => {
                     }
                 </div>
                 <img src={imgPlanet} className={style.imgPlanet}/>
-                {/*<div className={style.imgBlur}/>*/}
             </div>
 
             <img src={right_1} className={style.right_1}/>
