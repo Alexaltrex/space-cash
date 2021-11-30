@@ -9,6 +9,9 @@ import useIntersectionObserver from "@react-hook/intersection-observer";
 import clsx from "clsx";
 import {time} from "../../consts/consts";
 import ReactPlayer from 'react-player'
+import coin1 from '../../assets/img/gif/coin1.gif';
+import coin2 from '../../assets/img/gif/coin2.gif';
+
 
 interface IIconLinks {
     src: any
@@ -88,7 +91,8 @@ export const FirstBlock = () => {
         <section className={style.firstBlock} ref={ref}>
 
             <div className={style.mask}/>
-
+            <img src={coin1} className={style.coin1}/>
+            <img src={coin2} className={style.coin2}/>
 
 
             <div className={style.innerWrapper}>

@@ -22,16 +22,37 @@
     height: 100%;
   }
 
-  .videoWrapper {
-    z-index: 20;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
+  .rocketMobile {
+    @include onlyMobile() {
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
 
-    video {
-      object-fit: cover;
+      video {
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+
+  }
+
+
+  .rocketDesktop {
+    @include onlyDesktop() {
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+
+      video {
+        object-fit: cover;
+      }
     }
   }
 
