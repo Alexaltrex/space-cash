@@ -51,7 +51,7 @@ const icon_3 = <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns
 </svg>
 
 const iconLinks: IIconLinks[] = [
-    {src: icon_0, href: '#', text: 'PancakeSwap'},
+    {src: icon_0, href: '#', text: 'Pancake Swap'},
     {src: icon_1_white, href: '#', text: 'Dextools'},
     {src: icon_2, href: '#', text: 'Telegram'},
     {src: icon_3, href: '#', text: 'Docs'},
