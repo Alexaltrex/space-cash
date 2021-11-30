@@ -72,6 +72,7 @@ const App = () => {
                     playing={true}
                     loop={true}
                     muted={true}
+                    playsinline={true}
                 />
             </div>
 

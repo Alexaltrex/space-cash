@@ -101,6 +101,7 @@ export const FirstBlock = () => {
                     playing={true}
                     loop={true}
                     muted={true}
+                    playsinline={true}
                 />
             </div>
 
