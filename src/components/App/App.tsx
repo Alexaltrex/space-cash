@@ -63,10 +63,10 @@ const App = () => {
                         onClickHandler={() => setBurgerIsOpen(false)}
             />
 
-            <div className={style.rocketMobile}>
+            <div className={style.rocketDesktop}>
                 <ReactPlayer
                     className={style.video}
-                    url={process.env.REACT_APP_ROCKET_MOBILE_SRC}
+                    url={process.env.REACT_APP_ROCKET_SRC}
                     width='100%'
                     height='100%'
                     playing={true}
@@ -74,18 +74,6 @@ const App = () => {
                     muted={true}
                 />
             </div>
-
-            {/*<div className={style.rocketDesktop}>*/}
-            {/*    <ReactPlayer*/}
-            {/*        className={style.video}*/}
-            {/*        url={process.env.REACT_APP_ROCKET_SRC}*/}
-            {/*        width='100%'*/}
-            {/*        height='100%'*/}
-            {/*        playing={true}*/}
-            {/*        loop={true}*/}
-            {/*        muted={true}*/}
-            {/*    />*/}
-            {/*</div>*/}
 
 
             <div className={style.stars}

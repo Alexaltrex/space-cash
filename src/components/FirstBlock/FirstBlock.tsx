@@ -15,7 +15,6 @@ import coin2 from '../../assets/img/gif/coin2.gif';
 
 interface IIconLinks {
     src: any
-    //src_hover: string
     href: string
     text: string
 }
@@ -93,7 +92,17 @@ export const FirstBlock = () => {
             <div className={style.mask}/>
             <img src={coin1} className={style.coin1}/>
             <img src={coin2} className={style.coin2}/>
-
+            <div className={style.rocketMobile}>
+                <ReactPlayer
+                    className={style.video}
+                    url={process.env.REACT_APP_ROCKET_MOBILE_SRC}
+                    width='100%'
+                    height='100%'
+                    playing={true}
+                    loop={true}
+                    muted={true}
+                />
+            </div>
 
             <div className={style.innerWrapper}>
 

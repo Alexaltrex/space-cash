@@ -22,23 +22,7 @@
     height: 100%;
   }
 
-  .rocketMobile {
-    @include onlyMobile() {
-      z-index: 20;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100vh;
 
-      video {
-        width: 100%;
-        object-fit: cover;
-        object-position: top center;
-      }
-    }
-
-  }
 
 
   .rocketDesktop {

@@ -41,6 +41,24 @@ $margin: calc( (100vw - 1140px) * 0.5 );
     }
   }
 
+  .rocketMobile {
+    @include onlyMobile() {
+      z-index: -2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+
+      video {
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+
+  }
+
   .innerWrapper {
     @include innerWrapper();
 
