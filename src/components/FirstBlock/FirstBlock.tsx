@@ -112,10 +112,7 @@ export const FirstBlock = () => {
                         [style.title]: true,
                         [style.title_intersected]: intersected,
                     })}
-                    >
-                        <span>Lorem ipsum dolor sit amet, consectetur</span>
-                        <span> adipiscing elit sed </span>
-                    </h1>
+                    >LOREM IPSUM DOLOR SIT AMET, CONSECTETUR <span>ADIPISCING ELIT SED</span></h1>
 
                     <p className={clsx({
                         [style.text]: true,
