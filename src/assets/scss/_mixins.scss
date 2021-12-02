@@ -48,17 +48,27 @@
 }
 
 @mixin bubble {
-  transition: transform 0.3s ease-out;
-  @include desktop() {
-    transition: transform 0.5s ease-out;
-  }
-  transform: scaleY(0.0001);
+  opacity: 0;
+  transition: 0.2s ease-out;
 
-  transform-origin: bottom center;
-  &_intersected {
-    transform: scale(1);
+  @include desktop() {
+    opacity: 1;
+    transition: 0.5s ease-out;
+    transform: scaleY(0.0001);
+    transform-origin: bottom center;
   }
-};
+
+
+  &_intersected {
+    opacity: 1;
+
+    @include desktop() {
+      transform: scale(1);
+    }
+  }
+}
+
+;
 
 @mixin button-full-active {
   background: linear-gradient(270deg, #62A74A 5.26%, #FFAF46 102.37%);
