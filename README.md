@@ -2,7 +2,7 @@
 # Space-cash
 link: https://alexaltrex.github.io/space-cash
 
-<img src="src/assets/img/login.jpg" width="800">
+<img src="https://user-images.githubusercontent.com/56224288/157668932-f7892504-4a91-408d-ab62-98f70fb1df8c.jpg" width="800">
 
 # Description
 React app works with cripto, with adaptive responsive design and scroll animation
